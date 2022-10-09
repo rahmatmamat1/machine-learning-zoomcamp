@@ -1,10 +1,6 @@
-#!/usr/bin/env python
-# coding: utf-8
-
 import requests
 
-
-url = 'https://churn-service-i2gw4npszq-uw.a.run.app'
+url = 'http://localhost:9696/predict'
 
 customer_id = 'xyz-123'
 customer = {
@@ -29,9 +25,7 @@ customer = {
     "totalcharges": (24 * 29.85)
 }
 
-
-response = requests.post(url, json=customer).json()
-# response = requests.post(url, headers={'Content-Type': 'application/json'}, json=customer).json()
+response = requests.post(url, headers={'Content-Type': 'application/json'}, json=customer).json()
 
 print(response)
 
