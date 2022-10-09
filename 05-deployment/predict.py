@@ -14,18 +14,21 @@ app = Flask('churn')
 
 @app.route('/predict', methods=['POST'])
 def predict():
-    customer = request.get_json()
+    try:
+        customer = request.get_json()
 
-    X = dv.transform([customer])
-    y_pred = model.predict_proba(X)[0, 1]
-    churn = y_pred >= 0.5
+        X = dv.transform([customer])
+        y_pred = model.predict_proba(X)[0, 1]
+        churn = y_pred >= 0.5
 
-    result = {
-        'churn_probability': float(y_pred),
-        'churn': bool(churn)
-    }
+        result = {
+            'churn_probability': float(y_pred),
+            'churn': bool(churn)
+        }
 
-    return jsonify(result)
+        return jsonify(result)
+    except Exception as e:
+        return jsonify({'error': str(e)})
 
 
 if __name__ == "__main__":

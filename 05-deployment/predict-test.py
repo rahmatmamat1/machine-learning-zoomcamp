@@ -4,7 +4,8 @@
 import requests
 
 
-url = 'https://churn-service-i2gw4npszq-uw.a.run.app'
+url = 'https://churn-service-7bb3esgl5a-uc.a.run.app/predict'
+# url = 'http://localhost:9696/predict'
 
 customer_id = 'xyz-123'
 customer = {
@@ -31,7 +32,6 @@ customer = {
 
 
 response = requests.post(url, json=customer).json()
-# response = requests.post(url, headers={'Content-Type': 'application/json'}, json=customer).json()
 
 print(response)
 
