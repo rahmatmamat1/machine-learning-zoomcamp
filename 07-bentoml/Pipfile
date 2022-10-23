@@ -1,0 +1,19 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+bentoml = "*"
+numpy = "*"
+pandas = "*"
+scikit-learn = "*"
+xgboost = "*"
+pydantic = "*"
+locust = "*"
+pywin32 = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.9"
