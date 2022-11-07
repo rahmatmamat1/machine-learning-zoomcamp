@@ -42,7 +42,6 @@ Each row of the training data contains a click record, with the following featur
 ## Prerequisites
 1. Docker - Install instruction: https://docs.docker.com/install
 2. Google cloud CLI tool - Install instruction: https://cloud.google.com/sdk/docs/install
-3. Google Cloud Billing
 
 ## Steps
 1. Install Dependencies
