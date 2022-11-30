@@ -39,15 +39,15 @@ Once you click next, define runtime environtment for this script, in this case I
 5. Deploy Cloud Fuctions
 Once source code updated, Click deploy. cloud function will automatically build container aand install libraries from requirements file. this can take some time, Once the setup is complete and the function is deployed successfully, a green tick mark will appear next to the function name.
 
-![](img/05_cloud%20function%20setup%20completed.PNG)
+    ![](img/05_cloud%20function%20setup%20completed.PNG)
 
 6. Testing serverless prediction service
 you can now test you service by clicking the function name and open testing tab. you can send JSON request like
 
-![](img/06_testing%20service.PNG)
+    ![](img/06_testing%20service.PNG)
 
-then click test the function to see the results.
+    then click test the function to see the results.
 
-![](img/07_request%20results.PNG)
+    ![](img/07_request%20results.PNG)
 
-or you can just run `test.py` to send request to your function.
+    or you can just run `test.py` to send request to your function.
