@@ -143,4 +143,8 @@ Each row of the training data contains a click record, with the following featur
     This command is equivalent to running `gcloud builds submit --tag [IMAGE] D:\Rahmatsyah Firdaus\Data Project\mid-term-project` and `gcloud run deploy fraud-service --image [IMAGE]`
 
     you can visit Service URL to open Swagger UI or send a request.
+    ```
+    $ python test_service.py
+    {'download_probability': 0.9966546297073364, 'download': True}
+    ```
 

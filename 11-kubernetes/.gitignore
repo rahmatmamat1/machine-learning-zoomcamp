@@ -1,0 +1,7 @@
+venv/
+.ipynb_checkpoints/
+__pycache__
+clothing-model
+clothing-model-v4.h5
+docker_command
+requirements.txt

@@ -1,7 +1,7 @@
 import requests
 
-# url = 'http://localhost:9696/'
-url = 'https://fraud-service-i2gw4npszq-uw.a.run.app'
+url = 'http://localhost:9696/'
+# url = 'https://fraud-service-i2gw4npszq-uw.a.run.app'
 
 click = {
     "ip": 23155,
