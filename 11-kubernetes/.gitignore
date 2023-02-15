@@ -5,3 +5,4 @@ clothing-model
 clothing-model-v4.h5
 docker_command
 requirements.txt
+docker-compose.yaml
