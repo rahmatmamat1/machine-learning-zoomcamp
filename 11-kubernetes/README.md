@@ -65,11 +65,12 @@ Before deploying our model, wee need to install these tools:
     ```bash
     docker tag SOURCE-IMAGE LOCATION-docker.pkg.dev/PROJECT-ID/REPOSITORY/IMAGE:TAG
     ```
-    example:
+    push the image.
     ```bash
     docker tag zoomcamp-10-model:xception-v4-001 us-west1-docker.pkg.dev/${PROJECT_ID}/ml-zoomcamp/zoomcamp-10-model:xception-v4-001
+    docker tag zoomcamp-10-gateway:001 us-west1-docker.pkg.dev/${PROJECT_ID}/ml-zoomcamp/zoomcamp-10-gateway:001
     ```
-
+    
     Setup the credential helper configuration for authentication
     ```bash
     gcloud auth configure-docker \
@@ -79,6 +80,7 @@ Before deploying our model, wee need to install these tools:
     Push the image to Artifact registry
     ```bash
     docker push us-west1-docker.pkg.dev/${PROJECT_ID}/ml-zoomcamp/zoomcamp-10-model:xception-v4-001
+    docker push us-west1-docker.pkg.dev/${PROJECT_ID}/ml-zoomcamp/zoomcamp-10-gateway:001
     ```
 
 6. Create GKE cluster
@@ -120,6 +122,10 @@ Before deploying our model, wee need to install these tools:
 
 8. Test the API
     Use the API by sending a POST request to the EXTERNAL-IP of gateway with the input image in the request body. you can simply run `test.py` file.
+    ```bash
+    $ python test.py
+    {'dress': -1.8682901859283447, 'hat': -4.761244773864746, 'longsleeve': -2.316983461380005, 'outwear': -1.062570333480835, 'pants': 9.88715934753418, 'shirt': -2.8124334812164307, 'shoes': -3.666282892227173, 'shorts': 3.200361490249634, 'skirt': -2.6023383140563965, 't-shirt': -4.835045337677002}
+    ```
 
 
 
