@@ -1,0 +1,16 @@
+apiVersion: "serving.kserve.io/v1beta1"
+kind: "InferenceService"
+metadata:
+  name: "churn"
+spec:
+  predictor:
+    sklearn:
+      # image: agrigorev/sklearnserver:3.8-1.0-predict-proba
+      storageUri: "gs://ml-zoomcamp-model/model.joblib"
+      resources:
+        requests:
+          cpu: 200m
+          memory: 128Mi
+        limits:
+          cpu: 300m
+          memory: 256Mi
