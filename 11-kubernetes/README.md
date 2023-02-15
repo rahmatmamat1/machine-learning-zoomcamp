@@ -18,7 +18,7 @@ Before deploying our model, wee need to install these tools:
 * Docker, Docker desktop instalation instruction [here](https://docs.docker.com/desktop/install/windows-install/)
 * kubectl: the Kubernetes command-line tool, Docker desktop comes with kubectl already.
 * GCP account
-* Goggle Cloud CLI: set of tools to create and manage Google Cloud resources. [link](https://cloud.google.com/sdk/docs/install-sdk)
+* Google Cloud CLI: set of tools to create and manage Google Cloud resources. [link](https://cloud.google.com/sdk/docs/install-sdk)
 
 ## How to Run
 
@@ -119,7 +119,7 @@ Before deploying our model, wee need to install these tools:
     ```
 
 8. Test the API
-    Use the API by sending a POST request to http://104.199.121.64/predict with the input image in the request body. you can simply run `test.py` file.
+    Use the API by sending a POST request to the EXTERNAL-IP of gateway with the input image in the request body. you can simply run `test.py` file.
 
 
 
